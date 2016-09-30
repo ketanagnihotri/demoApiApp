@@ -1,0 +1,142 @@
+﻿{
+	"perRoomFares": [{
+		"id": "1",
+		"supplierId": "181",
+		"supplierHotelId": "1233",
+		"groupId": "12",
+		"refundability": "nonRefundable",
+		"onlineCancellable": false,
+		"perRoomCancellationPossible": true,
+		"onRequest": false,
+		"voucherId": "1",
+		"inclusions": ["Sample1, sample2"],
+		"room": {
+			"name": "string",
+			"description": "string",
+			"type": "string",
+			"maxOccupancy": 1,
+			"smokingPreference": "string",
+			"roomViews": ["Sample1, sample2"],
+			"id": "string",
+			"rateRoomOccupancy": {
+				"adultCount": 1,
+				"childCount": 0
+			},
+			"bedDetails": [{
+				"type": "string",
+				"count": 1,
+				"description": "string"
+			}]
+		},
+		"displayFare": {
+			"currency": "USD",
+			"baseAmount": 190,
+			"fees": [{
+				"amount": 10,
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": 10,
+				"desc": "",
+				"source": "fareComponentSource"
+			}],
+			"taxes": [{
+				"amount": 10,
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"policies": [{
+			"type": "POLICY_PREPAY",
+			"text": "The total price of the reservation may be charged anytime after booking."
+		}],
+		"boardBasis": {
+			"code": "",
+			"desc": "",
+			"type": "",
+			"price": "10 USD",
+			"amountIncludedInRate": true
+		},
+		"cancellationPolicy": {
+			"text": "",
+			"penaltyRules": [{
+				"value": 12.34,
+				"valueType": "Amount/Percent/Nights",
+				"window": {
+					"start": "2016-01-07T01:03:54.8079484+05:30",
+					"end": "2016-01-27T01:03:54.8079484+05:30"
+				}
+			}]
+		}
+	}],
+	"perBookingFares": [{
+		"id": "1",
+		"supplierId": "181",
+		"supplierHotelId": "1233",
+		"groupId": "12",
+		"refundability": "nonRefundable",
+		"onlineCancellable": false,
+		"perRoomCancellationPossible": true,
+		"onRequest": false,
+		"voucherId": "1",
+		"inclusions": ["Sample1, sample2"],
+		"rooms": [{
+			"name": "string",
+			"description": "string",
+			"type": "string",
+			"maxOccupancy": 1,
+			"smokingPreference": "string",
+			"roomViews": ["Sample1, sample2"],
+			"id": "string",
+			"rateRoomOccupancy": {
+				"adultCount": 1,
+				"childCount": 0
+			},
+			"bedDetails": [{
+				"type": "string",
+				"count": 1,
+				"description": "string"
+			}]
+		}],
+		"displayFare": {
+			"currency": "USD",
+			"baseAmount": 190,
+			"fees": [{
+				"amount": 10,
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": 10,
+				"desc": "",
+				"source": "fareComponentSource"
+			}],
+			"taxes": [{
+				"amount": 10,
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"policies": [{
+			"type": "POLICY_PREPAY",
+			"text": "The total price of the reservation may be charged anytime after booking."
+		}],
+		"boardBasis": {
+			"code": "",
+			"desc": "",
+			"type": "",
+			"price": "10 USD",
+			"amountIncludedInRate": true
+		},
+		"cancellationPolicy": {
+			"text": "",
+			"penaltyRules": [{
+				"value": 12.34,
+				"valueType": "Amount/Percent/Nights",
+				"window": {
+					"start": "2016-01-07T01:03:54.8079484+05:30",
+					"end": "2016-01-27T01:03:54.8079484+05:30"
+				}
+			}]
+		}
+	}]
+}

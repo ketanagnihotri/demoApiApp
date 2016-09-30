@@ -1,0 +1,281 @@
+﻿{
+	"perRoomRates": [{
+		"id": "1",
+		"supplierId": "181",
+		"supplierHotelId": "1233",
+		"groupId": "12",
+		"code": "MER",
+		"refundability": "nonRefundable",
+		"depositRequired": false,
+		"guaranteeRequired": false,
+		"allGuestInfoRequired": true,
+		"roomType": "string",
+		"additionalCharges": ["Sample, Sample2"],
+		"onlineCancellable": false,
+		"perRoomCancellationPossible": true,
+		"onRequest": false,
+		"inclusions": ["Sample, Sample2"],
+		"allowedCreditCards": ["Sample, Sample2"],
+		"room": {
+			"name": "string",
+			"description": "string",
+			"code": "string",
+			"roomTypeCode": "string",
+			"type": "string",
+			"availableRoomCount": 10,
+			"maxOccupancy": 1,
+			"smokingPreference": "string",
+			"roomViews": ["Sample, Sample2"],
+			"id": "string",
+			"rateRoomOccupancy": {
+				"refId": "string",
+				"adultCount": 1,
+				"childCount": 0
+			},
+			"bedDetails": [{
+				"type": "string",
+				"count": 1,
+				"description": "string"
+			}]
+		},
+		"displayFare": {
+			"currency": "USD",
+			"baseAmount": 190,
+			"totalMarkup": 10,
+			"fees": [{
+				"amount": 10,
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": 10,
+				"desc": "",
+				"source": "rateComponentSource"
+			}],
+			"taxes": [{
+				"amount": 10,
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"rateBreakup": {
+			"baseFare": "190 USD",
+			"fees": [{
+				"amount": "10 USD",
+				"desc": ""
+			}],
+			"markups": [{
+				"amount": "10 USD",
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": "10 USD",
+				"desc": "",
+				"source": ""
+			}],
+			"taxes": [{
+				"amount": "10 USD",
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"supplierDailyRates": {
+			"taxIncluded": true,
+			"dailyRates": [{
+				"date": "2015-12-10",
+				"amount": 24.55,
+				"discount": 10
+			}]
+		},
+		"supplierDailyFares": {
+			"taxIncluded": true,
+			"dailyFares": [{
+				"date": "2015-12-10",
+				"amount": 24.55,
+				"discount": 10
+			}]
+		},
+		"rackRate": "100 USD",
+		"policies": [{
+			"type": "POLICY_PREPAY",
+			"text": "The total price of the reservation may be charged anytime after booking."
+		}],
+		"boardBasis": {
+			"code": "",
+			"desc": "",
+			"type": "",
+			"price": "10 USD",
+			"amountIncludedInRate": true
+		},
+
+		"offer": {
+			"title": "Amazing Offer",
+			"desc": "",
+			"fixedDiscountOffer": "25 USD",
+			"percentageDiscountOffer": {
+				"amount": 10.0,
+				"appliedOn": "baseRate/totalRate"
+			},
+			"stayOffer": {
+				"stayNights": 5,
+				"freeNights": 2
+			}
+		},
+		"cancellationPolicy": {
+			"text": "",
+			"penaltyRules": [{
+				"value": 12.34,
+				"valueType": "Amount/Percent/Nights",
+				"window": {
+					"start": "2016-01-07T01:03:54.8079484+05:30",
+					"end": "2016-01-27T01:03:54.8079484+05:30"
+				}
+			}]
+		},
+		"supplierCommissions": [{
+			"amount": "0 USD",
+			"desc": "sample Commission"
+		}],
+		"packageSaving": "10.00 USD"
+	}],
+	"perBookingRates": [{
+		"id": "1",
+		"desc": "Rate description",
+		"isPrepaid": false,
+		"type": "published/negotiated",
+		"supplierId": "181",
+		"supplierHotelId": "1233",
+		"groupId": "12",
+		"code": "MER",
+		"refundability": "nonRefundable",
+		"depositRequired": false,
+		"guaranteeRequired": false,
+		"allGuestInfoRequired": true,
+		"roomType": "string",
+		"additionalCharges": ["Sample, Sample2"],
+		"onlineCancellable": false,
+		"perRoomCancellationPossible": true,
+		"onRequest": false,
+		"inclusions": ["Sample, Sample2"],
+		"allowedCreditCards": ["Sample, Sample2"],
+		"rooms": [{
+			"name": "string",
+			"description": "string",
+			"code": "string",
+			"roomTypeCode": "string",
+			"type": "string",
+			"availableRoomCount": 10,
+			"maxOccupancy": 1,
+			"smokingPreference": "string",
+			"roomViews": ["Sample, Sample2"],
+			"id": "string",
+			"rateRoomOccupancy": {
+				"refId": "string",
+				"adultCount": 1,
+				"childCount": 0
+			},
+			"bedDetails": [{
+				"type": "string",
+				"count": 1,
+				"description": "string"
+			}]
+		}],
+		"displayFare": {
+			"currency": "USD",
+			"baseAmount": 190,
+			"totalMarkup": 10,
+			"fees": [{
+				"amount": 10,
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": 10,
+				"desc": "",
+				"source": "rateComponentSource"
+			}],
+			"taxes": [{
+				"amount": 10,
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"rateBreakup": {
+			"baseFare": "190 USD",
+			"fees": [{
+				"amount": "10 USD",
+				"desc": ""
+			}],
+			"markups": [{
+				"amount": "10 USD",
+				"desc": ""
+			}],
+			"discounts": [{
+				"amount": "10 USD",
+				"desc": "",
+				"source": ""
+			}],
+			"taxes": [{
+				"amount": "10 USD",
+				"desc": "",
+				"code": "121"
+			}]
+		},
+		"supplierDailyRates": {
+			"taxIncluded": true,
+			"dailyRates": [{
+				"date": "2015-12-10",
+				"amount": 24.55,
+				"discount": 10
+			}]
+		},
+		"supplierDailyFares": {
+			"taxIncluded": true,
+			"dailyFares": [{
+				"date": "2015-12-10",
+				"amount": 24.55,
+				"discount": 10
+			}]
+		},
+		"rackRate": "100 USD",
+		"policies": [{
+			"type": "POLICY_PREPAY",
+			"text": "The total price of the reservation may be charged anytime after booking."
+		}],
+		"boardBasis": {
+			"code": "",
+			"desc": "",
+			"type": "",
+			"price": "10 USD",
+			"amountIncludedInRate": true
+		},
+
+		"offer": {
+			"title": "Amazing Offer",
+			"desc": "",
+			"fixedDiscountOffer": "25 USD",
+			"percentageDiscountOffer": {
+				"amount": 10.0,
+				"appliedOn": "baseRate/totalRate"
+			},
+			"stayOffer": {
+				"stayNights": 5,
+				"freeNights": 2
+			}
+		},
+		"cancellationPolicy": {
+			"text": "",
+			"penaltyRules": [{
+				"value": 12.34,
+				"valueType": "Amount/Percent/Nights",
+				"window": {
+					"start": "2016-01-07T01:03:54.8079484+05:30",
+					"end": "2016-01-27T01:03:54.8079484+05:30"
+				}
+			}]
+		},
+		"supplierCommissions": [{
+			"amount": "0 USD",
+			"desc": "sample Commission"
+		}],
+		"packageSaving": "10.00 USD"
+	}]
+}

@@ -1,0 +1,5 @@
+ 
+[submodule "submodules/kenobi-frameworks-common"]
+	path = submodules/kenobi-frameworks-common
+	url = git@github.com:ConnexionsTravel/kenobi-frameworks-common.git
+	branch = develop

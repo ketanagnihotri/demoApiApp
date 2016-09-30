@@ -1,0 +1,11 @@
+{
+  "id": "1234",
+  "data": {
+    "tripId": "1",
+    "bookingId": "111",
+    "tenantId": "123456"
+  },
+  "eventType": "Cancellation",
+  "timeStamp": "",
+  "correlationId": ""
+}

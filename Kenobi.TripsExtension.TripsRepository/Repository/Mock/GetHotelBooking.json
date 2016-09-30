@@ -1,0 +1,72 @@
+﻿[
+  {
+    "id": "B001",
+    "posId": "52",
+    "status": "Confirmed",
+    "supplierId": "S001",
+    "hotelId": "Hotel_001",
+    "hotelName": "Novotel",
+    "hotelAddress": {
+      "line1": "AddressLine1",
+      "line2": "AddressLine2",
+      "city": {
+        "code": "PNQ",
+        "name": "Pune"
+      },
+      "state": {
+        "code": "MH",
+        "name": "Maharashtra"
+      },
+      "countryCode": "IN",
+      "zipCode": "411014"
+    },
+    "hotelGeoCode": {
+      "lat": 13.43,
+      "long": 12.45
+    },
+    "stayPeriod": {
+      "end": "2015-12-19",
+      "start": "2015-12-15"
+    },
+    "progress": "string",
+    "paymentStatus": "Pending",
+    "leadPaxId": "p001",
+    "sessionId": "5ccc1e3e-48a8-49f7-b615-3bf4712d99ef",
+    "supplierSessionId": "8f9b27b3-9963-42f7-bd94-5900be7ee048"
+  },
+  {
+    "id": "B002",
+    "posId": "52",
+    "status": "Confirmed",
+    "supplierId": "S001",
+    "hotelId": "Hotel_002",
+    "hotelName": "Hyatt",
+    "hotelAddress": {
+      "line1": "AddressLine1",
+      "line2": "AddressLine2",
+      "city": {
+        "code": "PNQ",
+        "name": "Pune"
+      },
+      "state": {
+        "code": "MH",
+        "name": "Maharashtra"
+      },
+      "countryCode": "IN",
+      "zipCode": "411014"
+    },
+    "hotelGeoCode": {
+      "lat": 13.43,
+      "long": 12.45
+    },
+    "stayPeriod": {
+      "end": "2015-12-19",
+      "start": "2015-12-15"
+    },
+    "progress": "string",
+    "paymentStatus": "Pending",
+    "leadPaxId": "p001",
+    "sessionId": "5ccc1e3e-48a8-49f7-b615-3bf4712d99eg",
+    "supplierSessionId": "8f9b27b3-9963-42f7-bd94-5900be7ee049"
+  }
+]

@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{697C068E-F01C-4976-BB0D-285A72DB71C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kenobi.TripsExtension.ServiceTests</RootNamespace>
+    <AssemblyName>Kenobi.TripsExtension.ServiceTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LZ4, Version=1.0.9.93, Culture=neutral, PublicKeyToken=62e1b5ec1eec9bdd, processorArchitecture=MSIL">
+      <HintPath>..\packages\lz4net.1.0.9.93\lib\net4-client\LZ4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.3.0.442, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.3.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Tavisca.Frameworks.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Helper.2.0.0.1\lib\net45\Tavisca.Frameworks.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tavisca.Frameworks.Logging, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Logging.4.0.0.0\lib\net461\Tavisca.Frameworks.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tavisca.Frameworks.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Serialization.3.0.0.0\lib\net461\Tavisca.Frameworks.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TripService\TripServiceTest\TripServiceTest.cs" />
+    <Compile Include="WebhookControllerServiceTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Prod.config">
+      <DependentUpon>App.config</DependentUpon>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Stage.config">
+      <DependentUpon>App.config</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TripService\Local_NodeJs\node_modules\.bin\express" />
+    <None Include="TripService\Local_NodeJs\node_modules\.bin\express.cmd" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\bin\express" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\History.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\.bin\mkdirp" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\.bin\mkdirp.cmd" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\basic-auth\HISTORY.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\basic-auth\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\basic-auth\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\basic-auth\README.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\commander\History.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\commander\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\commander\Readme.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\History.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\.npmignore" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\.travis.yml" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\Makefile" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\README.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\HISTORY.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\.npmignore" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\.travis.yml" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\Changelog.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\big5-added.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp936.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp949.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\cp950.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\eucjp.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\gb18030-ranges.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\gbk-added.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\tables\shiftjis.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\README.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\HISTORY.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\README.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\README.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\HISTORY.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\bytes\History.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\bytes\LICENSE" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\bytes\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\bytes\Readme.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\.npmignore" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\.travis.yml" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\Changelog.md" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\tables\big5-added.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\tables\cp936.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\tables\cp949.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\tables\cp950.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\tables\eucjp.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\package.json" />
+    <None Include="TripService\Local_NodeJs\node_modules\express\Readme.md" />
+    <None Include="TripService\Local_NodeJs\Package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kenobi.TripsExtension.Core\Kenobi.TripsExtension.Core.csproj">
+      <Project>{E5CD4AAD-5A2E-40B2-B71D-E08438BDAE4F}</Project>
+      <Name>Kenobi.TripsExtension.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kenobi.TripsExtension.Entities\Kenobi.TripsExtension.Entities.csproj">
+      <Project>{3c831f16-5052-45aa-95a5-9120b5fc5536}</Project>
+      <Name>Kenobi.TripsExtension.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kenobi.TripsExtension.Proxy\Kenobi.TripsWrapper.Proxy.csproj">
+      <Project>{23eeced3-7f60-44b8-bc82-aa72a23ee11f}</Project>
+      <Name>Kenobi.TripsWrapper.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kenobi.TripsExtension.TestDataProvider\kenobi.TripsExtension.TestDataProvider.csproj">
+      <Project>{8f87d95e-82c1-4e7c-bfef-7918a7aa1f01}</Project>
+      <Name>kenobi.TripsExtension.TestDataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kenobi.TripsExtension.TripService\Kenobi.TripsExtension.TripService.csproj">
+      <Project>{14b4dd8d-ed38-4234-a24b-096566a960a1}</Project>
+      <Name>Kenobi.TripsExtension.TripService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common.Errors.Hotel\Kenobi.Common.Errors.Hotel.csproj">
+      <Project>{B7135FD3-818D-45D7-8FFD-1D7B0E7D5983}</Project>
+      <Name>Kenobi.Common.Errors.Hotel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common\Kenobi.Common.csproj">
+      <Project>{4dc236fe-9997-41bc-9942-9766d487a823}</Project>
+      <Name>Kenobi.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TripService\Local_NodeJs\node_modules\express\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\application.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\express.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\middleware.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\request.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\response.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\router\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\router\route.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\utils.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\lib\view.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\basic-auth\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\commander\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\cache.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\connect.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\basicAuth.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\compress.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\cookieSession.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\csrf.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\directory.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\errorHandler.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\favicon.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\json.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\limit.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\logger.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\multipart.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\query.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\responseTime.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\session.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\static.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\staticCache.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\timeout.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\urlencoded.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\middleware\vhost.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\patch.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\proto.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\public\favicon.ico" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\lib\utils.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\basic-auth-connect\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\lib\read.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\lib\types\json.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\lib\types\raw.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\lib\types\text.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\lib\types\urlencoded.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\dbcs-codec.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\dbcs-data.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\internal.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-codec.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-data-generated.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\sbcs-data.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\utf16.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\encodings\utf7.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\lib\bom-handling.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\lib\extend-node.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\lib\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\iconv-lite\lib\streams.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\on-finished\node_modules\ee-first\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\bytes\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\dbcs-codec.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\dbcs-data.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\index.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\internal.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\sbcs-codec.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\sbcs-data-generated.js" />
+    <Content Include="TripService\Local_NodeJs\node_modules\express\node_modules\connect\node_modules\body-parser\node_modules\raw-body\node_modules\iconv-lite\encodings\sbcs-data.js" />
+    <Content Include="TripService\Local_NodeJs\routes\trips-cancelled.js" />
+    <Content Include="TripService\Local_NodeJs\routes\trips.js" />
+    <Content Include="TripService\Local_NodeJs\Server.js" />
+    <Content Include="TripService\Local_NodeJs\StepsToStartNodeServer.txt" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

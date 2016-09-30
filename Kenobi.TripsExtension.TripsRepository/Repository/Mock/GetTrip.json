@@ -1,0 +1,12 @@
+﻿{
+    "id" : "101",
+    "name": "MyTripToParis",
+    "ownerId": "201",
+    "creatorId": "501",
+    "posId": "52",
+    "orgId" : "20058",
+    "type": "corporate",
+    "status": "planned",       
+    "createdOn": "1990-07-16T19:20:30.45+01:00",
+    "modifiedOn": "1990-07-16T19:20:30.45+01:00"
+}

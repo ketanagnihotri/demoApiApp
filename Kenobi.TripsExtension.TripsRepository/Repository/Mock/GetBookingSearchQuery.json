@@ -1,0 +1,56 @@
+﻿{
+  "bounds": {
+    "circle": {
+      "center": {
+        "lat": 1.23,
+        "long": 5.67
+      },
+      "radiusKm": 10
+    },
+    "rectangle": {
+      "topLeft": {
+        "lat": 1.23,
+        "long": 5.67
+      },
+      "bottomRight": {
+        "lat": 1.23,
+        "long": 5.67
+      }
+    }
+  },
+  "culture": "string",
+  "currency": "USD",
+  "filters": {
+    "minHotelPrice": 100.23,
+    "maxHotelPrice": 123.23,
+    "minHotelRating": 1,
+    "maxHotelRating": 1,
+    "hotelChains": [ "Sample hotel chain" ]
+  },
+  "includeHotelsWithoutRates": false,
+  "posId": "123",
+  "roomOccupancies": [
+    {
+      "occupants": [
+        {
+          "type": "adult",
+          "age": 25
+        },
+        {
+          "type": "adult",
+          "age": 30
+        },
+        {
+          "type": "child",
+          "age": 10
+        }
+      ]
+    }
+  ],
+  "stayPeriod": {
+    "end": "2015-12-19",
+    "start": "2015-12-15"
+  },
+  "travellerCountryCodeOfResidence": "IN",
+  "travellerNationalityCode": "US"
+}

@@ -1,0 +1,12 @@
+The code makes use of the following:
+1. Node Js (make sure you have NodeJs and NPM installed on you machine - https://nodejs.org/en/download/")
+
+Step 1: Open Power Shell of your machine in Admin Mode
+Step 2: navigate to the folder - "Local_NodeJs"
+Step 3: Run the Command "npm install"  
+Explanation: This will install all the necessary files for Express Js
+
+Step 4: Run the command "npm start"
+Explanation: This will start the site your local machine on port 5000. You should see the message on power shell "Listening on port 5000..."
+
+Test: Open your browser and type "http://localhost:5000/trips/trip001", if all is well you would receive Json data.

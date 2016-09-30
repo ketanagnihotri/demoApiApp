@@ -1,0 +1,115 @@
+﻿{
+  "activities": [
+    {
+      "name": "Outdoor tennis courts",
+      "desc": "sampleDescription",
+      "category": "sampleGroupName"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Meeting Rooms",
+      "desc": "sampleDescription",
+      "category": "sampleGroupName"
+    }
+  ],
+  "areaAttractions": [
+    {
+      "name": "Casino",
+      "desc": "sampleDescription"
+    }
+  ],
+  "checkinCheckoutPolicy": [
+    {
+      "inTime": "15:00",
+      "outTime": "11:00",
+      "days": [ "sun", "mon", "tue", "wed", "thu" ]
+
+    },
+    {
+      "inTime": "14:00",
+      "outTime": "10:00",
+      "days": [ "fri", "sat" ]
+    }
+  ],
+  "contact": {
+    "address": {
+      "line1": "AddressLine1",
+      "line2": "AddressLine2",
+      "city": {
+        "code": "SFO",
+        "name": "San Francisco"
+      },
+      "state": {
+        "code": "CA",
+        "name": "California"
+      },
+      "countryCode": "US",
+      "postalCode": "94133"
+    },
+    "phones": [
+      {
+        "type": "unknown/work/home/mobile/fax",
+        "num": "9087654321",
+        "countryCode": "91",
+        "ext": "123466534343",
+        "areaCode": "022"
+      }
+    ],
+    "email": "cltsloyalty@noreply.com"
+  },
+  "contentSupplierFamily": "supplier family name",
+  "descriptions": [
+    {
+      "type": "sample type",
+      "value": "sample value"
+    }
+  ],
+  "geoCode": {
+    "lat": 38.5365798628134,
+    "long": -0.132263749837875
+  },
+  "hotelChain": {
+    "name": "Fletcher Hotels",
+    "uri": ""
+  },
+  "hotelCurrencyCode": "USD",
+  "id": "4074",
+  "images": [
+    {
+      "height": 250,
+      "imageCaption": "Guestroom",
+      "url": "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/457757/7251474_2_b.jpg",
+      "width": 150,
+      "horizontalResolution": 1.0,
+      "verticalResolution": 1.0
+    }
+  ],
+  "name": "Milord´s Suites",
+  "policies": [
+    {
+      "type": "",
+      "text": ""
+    }
+  ],
+  "rating": 3.0,
+  "source": {
+    "selectedSupplier": "101",
+    "suppliers": [
+      "101"
+    ]
+  },
+  "supportsPostpaidRates": false,
+  "supportsPrepaidRates": true,
+  "thumbnails": [
+    {
+      "height": 250,
+      "imageCaption": "Guestroom",
+      "url": "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/457757/7251474_2_b.jpg",
+      "width": 150,
+      "horizontalResolution": 1.0,
+      "verticalResolution": 1.0
+    }
+  ],
+  "websiteUrl": ""
+}

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5CD4AAD-5A2E-40B2-B71D-E08438BDAE4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kenobi.TripsExtension.Core</RootNamespace>
+    <AssemblyName>Kenobi.TripsExtension.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.3.0.449, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.4.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tavisca.Frameworks.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Helper.2.0.0.1\lib\net45\Tavisca.Frameworks.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tavisca.Frameworks.Logging, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Logging.4.0.0.0\lib\net461\Tavisca.Frameworks.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\BookingWebhookProvider.cs" />
+    <Compile Include="BusinessLogic\CancellationWebhookProvider.cs" />
+    <Compile Include="BusinessLogic\SwapTenantConfigurationProvider.cs" />
+    <Compile Include="DependencyInjection\IDependancyException.cs" />
+    <Compile Include="DependencyInjection\StructureMapContainerProvider.cs" />
+    <Compile Include="DependencyInjection\StructureMapServiceLocator.cs" />
+    <Compile Include="Infrastructure\ApplicationContext.cs" />
+    <Compile Include="Infrastructure\Constants.cs" />
+    <Compile Include="Infrastructure\LogHandler.cs" />
+    <Compile Include="Infrastructure\Utility.cs" />
+    <Compile Include="Interfaces\IBookingWebhookProvider.cs" />
+    <Compile Include="Interfaces\ICancellationWebhookProvider.cs" />
+    <Compile Include="Interfaces\ILogHandler.cs" />
+    <Compile Include="Interfaces\ISwapTenantConfigurationProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\RequestValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kenobi.TripsExtension.Entities\Kenobi.TripsExtension.Entities.csproj">
+      <Project>{3c831f16-5052-45aa-95a5-9120b5fc5536}</Project>
+      <Name>Kenobi.TripsExtension.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kenobi.TripsExtension.Proxy\Kenobi.TripsWrapper.Proxy.csproj">
+      <Project>{23eeced3-7f60-44b8-bc82-aa72a23ee11f}</Project>
+      <Name>Kenobi.TripsWrapper.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kenobi.TripsExtension.TripService\Kenobi.TripsExtension.TripService.csproj">
+      <Project>{14b4dd8d-ed38-4234-a24b-096566a960a1}</Project>
+      <Name>Kenobi.TripsExtension.TripService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kenobi.TripsExtension.TripsRepository\Kenobi.TripsExtension.TripsRepository.csproj">
+      <Project>{9825f114-20f9-4882-aa8b-979bd5f38443}</Project>
+      <Name>Kenobi.TripsExtension.TripsRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common.ConsulConfiguration\Kenobi.Common.ConsulConfiguration.csproj">
+      <Project>{9578cb32-2083-4b2b-80f7-5c95298fa03b}</Project>
+      <Name>Kenobi.Common.ConsulConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common.Errors.Hotel\Kenobi.Common.Errors.Hotel.csproj">
+      <Project>{b7135fd3-818d-45d7-8ffd-1d7b0e7d5983}</Project>
+      <Name>Kenobi.Common.Errors.Hotel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common.Metrics\Kenobi.Common.Metrics.csproj">
+      <Project>{da618f3c-0b30-4fdd-baf2-b0de1197e96a}</Project>
+      <Name>Kenobi.Common.Metrics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common.TenantConfiguration.DataStore\Kenobi.Common.TenantConfiguration.csproj">
+      <Project>{f2afca3f-1db4-46b6-b1e8-c1e43bd0fa8b}</Project>
+      <Name>Kenobi.Common.TenantConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Common\Kenobi.Common.csproj">
+      <Project>{4dc236fe-9997-41bc-9942-9766d487a823}</Project>
+      <Name>Kenobi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\submodules\kenobi-frameworks-common\Kenobi.Frameworks.Logging\Kenobi.Frameworks.Logging.csproj">
+      <Project>{ac425c05-3733-4cbe-a2e0-ea7f7a759eb3}</Project>
+      <Name>Kenobi.Frameworks.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

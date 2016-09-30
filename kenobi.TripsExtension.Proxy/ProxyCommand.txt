@@ -1,0 +1,6 @@
+﻿svcutil.exe /out:TripsEngine.cs /n:*,Kenobi.Tripswrapper.SaveShoppingCart.Proxy.TripsEngine http://apis.dev-kenobi.com/Engines/TripsEngine/TripsEngine.svc /ct:System.Collections.Generic.List`1
+
+svcutil.exe /out:TripsEngine.cs /n:*,Kenobi.Tripswrapper.SaveShoppingCart.Proxy http://apis.dev-kenobi.com/Engines/TripsEngine/TripsEngine.svc /ct:System.Collections.Generic.List`1
+
+svcutil.exe /out:TripsEngine.cs /n:*,Kenobi.Tripswrapper.SaveShoppingCart.Proxy.TripsEngine http://localhost:12238//TripsEngine.svc /ct:System.Collections.Generic.List`1
+

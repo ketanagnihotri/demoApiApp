@@ -1,0 +1,41 @@
+﻿[{
+	"card": {
+		"number": "####4444",
+		"issuedBy": "VISA"
+	},
+	"amount": 100,
+	"currency": "USD",
+	"status": "Settled",
+	"transactionId": "6b36c65d-88e5-4651-b48f-0c6f543e1691",
+	"providerTransactionId": "0a5c4abb-2835-4ecf-82b9-ef41d83af2c9",
+	"desc": "Mock Transaction",
+	"paymentBreakup": [{
+		"amount": 10,
+		"voucherId": "1",
+		"bookingId": "111"
+	}, {
+		"amount": 90,
+		"voucherId": "2",
+		"bookingId": "111"
+	}]
+}, {
+	"card": {
+		"number": "####1111",
+		"issuedBy": "VISA"
+	},
+	"amount": 100,
+	"currency": "USD",
+	"status": "Settled",
+	"transactionId": "6f7498ce-528a-4e17-9e30-1b3108f39356",
+	"providerTransactionId": "c5c05d45-c015-42f8-9f82-ca89f36ec099",
+	"desc": "Mock Transaction",
+	"paymentBreakup": [{
+		"amount": 10,
+		"voucherId": "1",
+		"bookingId": "111"
+	}, {
+		"amount": 90,
+		"voucherId": "2",
+		"bookingId": "111"
+	}]
+}]
